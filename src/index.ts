@@ -69,6 +69,9 @@ app.put('/users/:id', (req, res) => {
 app.get('/videos/', (req, res) => {
     res.send(db.videos);
 });
+app.get('/videos/:id', (req, res) => {
+    res.send(db.users.find((video)=> { return video.id === +req.params.id}));
+});
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
