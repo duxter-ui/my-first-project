@@ -25,7 +25,7 @@ app.get('/users/', (req, res) => {
 app.get('/users/:id', (req, res) => {
     let foundCourse = db.users.find((el)=> { return el.id === +req.params.id});
     if(!foundCourse) {
-        res.send('Нет такого пользователя')
+        res.send('Нет такого пользователя!!!!!!!!!')
         return;
     }
     res.send(foundCourse)
