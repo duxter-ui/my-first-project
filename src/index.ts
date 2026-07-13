@@ -8,8 +8,14 @@ const db = {
     {id:2, name:'terfF', password:'4648963', admin: false},
     {id:3, name:'AmIGO', password:'zaLUPA', admin: false},
     {id:4, name:'DJVLAD', password:'HELLOGUYS', admin: false},
-    {id:5, name:'kakzheslozhno', password:'rotebalJS', admin: true}
-]};
+    {id:5, name:'kakzheslozhno', password:'rotebalJS', admin: true}],
+
+    videos: [ {id: 1, title:'VIDEO S GOROHOM', resolution: 144},
+        {id: 2, title:'VIDEO S MOPSOM', resolution: 240},
+        {id: 3, title:'VIDEO S KOTOM', resolution: 360},
+        {id: 4, title:'VIDEO S BOMHZOM', resolution: 480},
+        {id: 5, title:'VIDEO S USHASTIM', resolution: 720},
+        {id: 6, title:'VIDEO S PINGVINOM', resolution: 1080}]};
 app.get('/', (req, res) => {
     res.send('ТЕСТИРУЕМ ХОСТИНГ RAILWAY ЕЩЕ РАЗ!!!');
 });
@@ -59,6 +65,9 @@ app.put('/users/:id', (req, res) => {
     } else {
         res.sendStatus(404)
     }
+});
+app.get('/videos/', (req, res) => {
+    res.send(db.videos);
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
