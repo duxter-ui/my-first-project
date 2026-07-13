@@ -11,7 +11,7 @@ const db = {
     {id:5, name:'kakzheslozhno', password:'rotebalJS', admin: true}
 ]};
 app.get('/', (req, res) => {
-    res.send('Hello World!!');
+    res.send('ТЕСТИРУЕМ ХОСТИНГ RAILWAY');
 });
 app.get('/users/', (req, res) => {
     const foundCourse = db.users.filter((el)=> {return el.name.indexOf(req.query.name as string) > -1})
