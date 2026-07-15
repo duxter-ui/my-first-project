@@ -44,7 +44,7 @@ const db:{users:usersType[], videos:videosType[]} = {
         {id: 5, title:'VIDEO S USHASTIM', resolution: 720},
         {id: 6, title:'VIDEO S PINGVINOM', resolution: 1080}]};
 app.get('/', (req, res) => {
-    res.send('ТЕСТИРУЕМ ХОСТИНГ RAILWAY ЕЩЕ РАЗ!!!');
+    res.sendFile("C:\\Users\\Public\\BackEndDimych\\my-first-project\\images\\super.jpg")
 });
 
 app.get('/users/', (req: RequestWithQuery<GetUserQueryModel>, res: Response<UserViewModel[]>) => {
